@@ -43,13 +43,24 @@
     </div>
 </div>
 
+
 <script>
 
     // Set these 3 variables to their DOM elements
 
-    var myImage;
-    var myRevenueMessage;
+    var myImage = document.getElementById('coffee_image');
+    myImage.setAttribute('src', 'static/coffee_beans.jpg');
 
+
+    var myRevenueMessage = document.getElementById("revenue");
+
+    function makeCoffee(){
+        myImage.setAttribute('src', 'static/coffee_mug.jpg');
+    }
+
+    myImage.addEventListener('click', makeCoffee);
+
+    
     // use this dictionary in further study step
 
     var prices = {
